@@ -1,5 +1,4 @@
 # Type & Learn AI
-# Type & Learn AI
 A tiny Monkeytype-style trainer. Give it a topic or paste raw notes, a local
 Ollama model writes a passage, and you type it against the clock. Typing the
 material is how you remember it.
