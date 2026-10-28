@@ -28,9 +28,4 @@ static/         index.html, style.css, app.js (no build step)
 data/           scores.json is created here
 ```
 
-## Config (env vars)
 
-| Variable       | Default                  |
-|----------------|--------------------------|
-| OLLAMA_MODEL   | gemma3:4b               |
-| OLLAMA_URL     | http://localhost:11434   |
