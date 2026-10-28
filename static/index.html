@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Type &amp; Learn AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <header class="top">
+    <h1>Type &amp; Learn AI</h1>
+    <p>Type it until you know it.</p>
+  </header>
+
+  <section id="setup">
+    <div id="thread" aria-live="polite"></div>
+
+    <form id="composer" autocomplete="off">
+      <textarea id="input" rows="3" aria-label="Topic or raw data"></textarea>
+      <div class="bar">
+        <div class="seg" role="group" aria-label="Input type">
+          <button type="button" data-mode="topic" aria-pressed="true">Topic</button>
+          <button type="button" data-mode="raw" aria-pressed="false">Raw data</button>
+        </div>
+        <div class="seg" role="group" aria-label="Round length">
+          <button type="button" data-duration="30" aria-pressed="false">30s</button>
+          <button type="button" data-duration="60" aria-pressed="true">60s</button>
+          <button type="button" data-duration="120" aria-pressed="false">120s</button>
+        </div>
+        <button class="go" type="submit">Generate</button>
+      </div>
+    </form>
+
+    <div id="best"></div>
+  </section>
+
+  <section id="game" hidden>
+    <div id="hud" class="hud">
+      <span id="time">60</span>
+      <span id="live">0 wpm</span>
+      <span id="words">0 / 0 words</span>
+    </div>
+
+    <div id="result" hidden>
+      <dl class="stats">
+        <div><dd id="r-wpm"></dd><dt>wpm</dt></div>
+        <div><dd id="r-acc"></dd><dt>accuracy</dt></div>
+        <div><dd id="r-time"></dd><dt>time</dt></div>
+      </dl>
+      <p id="r-note" class="note"></p>
+      <div class="actions">
+        <button id="retry" type="button" class="go">Retry this passage</button>
+        <button id="again" type="button" class="ghost">New passage</button>
+      </div>
+    </div>
+
+    <div id="box" class="box"><div id="text"></div></div>
+    <textarea id="typer" class="sr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Type here"></textarea>
+    <p id="hint" class="hint">Start typing to begin the timer. Esc to go back.</p>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
